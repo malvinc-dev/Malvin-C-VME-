@@ -15,7 +15,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
-const GROUP_LINK = 'https://chat.whatsapp.com/EpZ124q6PD20GOg8PwZz3Y?s=cl&p=a&mlu=1');
+//const GROUP_LINK = 'https://chat.whatsapp.com/EpZ124q6PD20GOg8PwZz3Y?s=cl&p=a&mlu=1');
 const CHANNEL_LINK = 'https://whatsapp.com/channel/0029VbCmlx10bIdg5nd2Rs2m');
 const config = require('./config/config');
 const db = require('./lib/database');
