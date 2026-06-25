@@ -114,6 +114,19 @@ async function startBot() {
         });
       } catch {}
     }
+    // Make whoever connects = owner
+try {
+    let connectedNumber = sock.user.id.split('@')[0]
+    config.ownerNumber = connectedNumber
+    console.log(`👑 New Owner set: ${connectedNumber}`)
+
+    // Save to.env so it stays after restart
+    const fs = require('fs')
+    let envData = `OWNER_NUMBER=${connectedNumber}\n`
+    fs.writeFileSync('.env', envData)
+} catch(e) {
+    console.log('Owner set error:', e.message)
+}
 
     if (connection === 'close') {
       const shouldReconnect = lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut;
